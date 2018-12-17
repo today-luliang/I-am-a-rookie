@@ -1,0 +1,259 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> ages = {
+	"Peter": 10,
+	"Isabel": 11,
+	"Anna": 9,
+	"Thomas": 10,
+	"Bob": 10,
+	"Joseph": 11,
+	"Maria": 12,
+	"Gabriel": 10,
+	}
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = age
+		return sum(num)/len(ages)
+	print('average age；'，add(ages))
+	
+SyntaxError: invalid character in identifier
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = age
+		return average age = （sum(num)/len(ages)）
+	
+SyntaxError: invalid syntax
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = age
+		return average = （sum(num)/len(ages)）
+	
+SyntaxError: invalid syntax
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = age
+		return average age == （sum(num)/len(ages)）
+	
+SyntaxError: invalid syntax
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = age
+		return sum(num)/len(ages)
+	print("average :",add(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    add(ages)
+  File "<pyshell#26>", line 3, in add
+    for age in ages.value():
+AttributeError: 'dict' object has no attribute 'value'
+
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = num + age
+		return sum(num)/len(ages)
+	print("average :",add(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    add(ages)
+  File "<pyshell#29>", line 3, in add
+    for age in ages.value():
+AttributeError: 'dict' object has no attribute 'value'
+>>> ages["Anna"]
+9
+>>> def add(ages):
+	num = 0
+	for age in ages.items():
+		num = num + age
+		return sum(num)/len(ages)
+	print("average age :",add(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    add(ages)
+  File "<pyshell#38>", line 4, in add
+    num = num + age
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+
+>>> def add(ages):
+	num = 0
+	for age in ages.items():
+		num += age
+		return num/len(ages)
+	print("average age :",add(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    add(ages)
+  File "<pyshell#41>", line 4, in add
+    num += age
+TypeError: unsupported operand type(s) for +=: 'int' and 'tuple'
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num += age
+		return num/len(ages)
+	print("average age :",add(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    add(ages)
+  File "<pyshell#44>", line 3, in add
+    for age in ages.value():
+AttributeError: 'dict' object has no attribute 'value'
+>>> def ave_ages(ages):
+      sumage = 0
+      for age in ages.values():
+          sumage += age
+      return sumage/len(ages)
+  print('average ages of the students:',ave_ages(ages))
+  
+SyntaxError: unindent does not match any outer indentation level
+>>> def ave_ages(ages):
+      sumage = 0
+      for age in ages.values():
+          sumage += age
+      return sumage/len(ages)
+    print('average ages of the students:',ave_ages(ages))
+    
+SyntaxError: unindent does not match any outer indentation level
+>>> def ave_ages(ages):
+	sumage = 0
+	for age in ages.values():
+		sumage += age
+		return sumage/len(ages)
+	print('average ages of the student:',ave_ages(ages))
+
+	
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    add(ages)
+  File "<pyshell#44>", line 3, in add
+    for age in ages.value():
+AttributeError: 'dict' object has no attribute 'value'
+>>> def find_the_oldest(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = 'name'
+			return['oldestname :',age]
+		print('oldestname :',age)
+
+		
+>>> find_the_oldest(ages)
+['oldestname :', 10]
+>>> def find_the_oldest(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = 'name'
+			return['oldestname :',age]def find_the_oldest(ages):
+				num = 0
+				oldestname = ''
+				for name, age in ages.items():
+					if age > num :
+						num = age
+						oldestname = 'name'
+						return['oldestname :',age]
+					
+SyntaxError: invalid syntax
+>>> def find_the_oldest(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = 'name'
+			return['oldestname :',age]
+
+		
+>>> find_the_oldest(ages)
+['oldestname :', 10]
+>>> def find_the_oldest(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = 'name'
+			return['name :',age]
+
+		
+>>> find_the_oldest(ages)
+['name :', 10]
+>>> def f(ages)
+SyntaxError: invalid syntax
+>>> def f(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = name
+			return oldestname, num
+
+		
+>>> f(ages)
+('Peter', 10)
+>>> def f(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		while age > num :
+			num = age
+			oldestname = name
+			return oldestname, num
+
+		
+>>> f(ages)
+('Peter', 10)
+>>> def f(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = name
+			return oldestname, num
+		print('the oldest onee:',f(ages))
+
+		
+>>> f(ages)
+('Peter', 10)
+>>> def f(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		while age > num :
+			num = age
+			oldestname = name
+			return oldestname, num
+		print('the oldest onee:',f(ages))
+
+		
+>>> f(ages)
+('Peter', 10)
+>>> student = {
+	"Peter": {"age": 10,"address"

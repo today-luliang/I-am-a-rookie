@@ -1,0 +1,92 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def producer(consumers):
+	print("Producer raedy")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+				consumer.send(val * val)
+	except GeneratorExit:
+		for consumer in consumers:
+			consumer.close()
+
+			
+>>> def consumer(name, low, high):
+	print("%s ready" % name)
+	try:
+		while True:
+			val = yield
+			if low < val < high:
+				print('%s got' % name, val)
+				except GeneratorExit:
+					
+SyntaxError: invalid syntax
+>>> def consumer(name, low, high):
+	print("%s ready" % name)
+	try:
+		while True:
+			val = yield
+			if low < val < high:
+				print('%s got' % name, val)
+	except GeneratorExit:
+		print("%s closed" % name)
+
+		
+>>> con1 = consumer('Consumer 1', 00, 10)
+>>> con2 = consumer('Consumer 2', 10, 20)
+>>> prod = producer([con1,con2])
+>>> next(prod)
+Producer raedy
+>>> next(con1)
+Consumer 1 ready
+>>> next(con2)
+Consumer 2 ready
+>>> prod.send(1)
+Consumer 1 got 1
+>>> prod.send(2)
+Consumer 1 got 4
+>>> prod.send(3)
+Consumer 1 got 9
+>>> prod.send(4)
+Consumer 2 got 16
+>>> prod.send(5)
+>>> prod.close()
+Consumer 1 closed
+Consumer 2 closed
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True；
+		
+SyntaxError: invalid character in identifier
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True；
+		
+SyntaxError: invalid character in identifier
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			consumer.send(val * val)
+	except GeneratorExit:
+		for consumer in consumers:
+			consumers.close()
+
+			
+>>> def consumer():
+	print("Consumer ready")
+	try:
+		while True；
+		
+SyntaxError: invalid character in identifier
+>>> def consumer(name):
+	print("%s ready" % name)
+	try:
+		while True:
+			val = yield
+			v1 = min(val)
+			v2 = max(val)
+			

@@ -1,0 +1,173 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def square():
+	print('MY coroutine')
+	while True:
+		val = yield
+		value = val * val
+		print('Got',value)
+
+		
+>>> co = coroutine()
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    co = coroutine()
+NameError: name 'coroutine' is not defined
+>>> num = square()
+>>> next(num)
+MY coroutine
+>>> num.send(1)
+Got 1
+>>> num.send(2)
+Got 4
+>>> def minimize():
+	print('My corounite')
+	while True:
+		val = yield
+		value  = min(val)
+		print('Got',value)
+
+		
+>>> num = minimize()
+>>> next(num)
+My corounite
+>>> num.send(1, 2, 3, 4, 5)
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    num.send(1, 2, 3, 4, 5)
+TypeError: send() takes exactly one argument (5 given)
+>>> def minimize():
+	print('My corounite')
+	while True:
+		val = yield
+		value  = min(val)
+		print('Got',value)
+
+		
+>>> num = minimize()
+>>> next(num)
+My corounite
+>>> num.send([1, 2, 3, 4, 5])
+Got 1
+>>> def producer(consumer):
+	print("Produce ready")
+	while True:
+		val = yield
+		consumer.send(val * val)
+
+		
+>>> def consumer():
+	print("Producer ready")
+	while True:
+		val = yield
+		print('Consumer got', val)
+
+		
+>>> cons = consumer()
+>>> prod = produce(cons)
+Traceback (most recent call last):
+  File "<pyshell#40>", line 1, in <module>
+    prod = produce(cons)
+NameError: name 'produce' is not defined
+>>> prod = producer(cons)
+>>> next(prod)
+Produce ready
+>>> next(cons)
+Producer ready
+>>> def consumer():
+	print("Consumer ready")
+	while True:
+		val = yield
+		print('Consumer got', val)
+
+		
+>>> cons = consumer()
+>>> prod = produce(cons)
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    prod = produce(cons)
+NameError: name 'produce' is not defined
+>>> def consumer():
+	print("Consumer ready")
+	while True:
+		val = yield
+		print('Consumer got', val)
+
+		
+>>> cons = consumer()
+>>> prod = producer(cons)
+>>> next(prod)
+Produce ready
+>>> next(cons)
+Consumer ready
+>>> prod.send(1)
+Consumer got 1
+>>> prod.send(2)
+Consumer got 4
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True；
+		
+SyntaxError: invalid character in identifier
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+		        cionsumer.send(val * val)
+	expect GeneratorExit:
+		
+SyntaxError: inconsistent use of tabs and spaces in indentation
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+		        consumer.send(val * val)
+	expect GeneratorExit:
+		
+SyntaxError: inconsistent use of tabs and spaces in indentation
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+				consumer.send(val * val)
+	expect GeneratorExit:
+		
+SyntaxError: invalid syntax
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+				consumer.send(val * val)
+				expect GeneratorExit:
+					
+SyntaxError: invalid syntax
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+			consumer.send(val * val)
+	expect GeneratorExit:
+		
+SyntaxError: expected an indented block
+>>> def producer(consumers):
+	print("Producer ready")
+	try:
+		while True:
+			val = yield
+			for consumer in consumers:
+				consumer.send(val * val)
+	expect GeneratorExit:
+		
+SyntaxError: invalid syntax
+>>> 

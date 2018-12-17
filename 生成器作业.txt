@@ -1,0 +1,167 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>>  def squares(n):
+	for value in range(n):
+		yield value * value
+
+		
+>>> squares(3)
+<generator object squares at 0x0000023F3A9FA6D8>
+>>> num = squares(3)
+>>> next(num)
+0
+>>> next(num)
+1
+>>> next(num)
+4
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    next(num)
+StopIteration
+SyntaxError: unexpected indent
+>>> def even(n):
+	for value in range(n):
+		value += 1
+		if value % 2 == 0:
+			yield value    #Returns the even number between all "a" to "b"
+
+			
+>>> even_num = even(9)
+>>> 
+>>> next(even_num)
+2
+>>> next(even_num)
+4
+>>> next(even_num)
+6
+>>> next(even_num)
+8
+>>> next(even_num)
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    next(even_num)
+StopIteration
+>>> def odd(n):
+	for value in range(n):
+		if value % 2 == 1:
+			yield value     #Returns the odd number between all "a" to "b"
+
+			
+>>> odd_num =  odd(9)
+>>> next(odd_num)
+1
+>>> next(odd_num)
+3
+>>> next(odd_num)
+5
+>>> next(odd_num)
+7
+>>> next(odd_num)
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    next(odd_num)
+StopIteration
+>>> def myrange(n):
+	for value in range(n):
+		value = n
+		while value > 0:
+			value -= 1
+			yield value
+
+			
+>>> num = myrange(9)
+>>> next(num)
+8
+>>> next(num)
+7
+>>> next(num)
+6
+>>> next(num)
+5
+>>> next(num)
+4
+>>> next(num)
+3
+>>> next(num)
+2
+>>> next(num)
+1
+>>> next(num)
+0
+>>> def fib(n):
+	m = 0
+	def num(x):
+		if x == 0:
+			return 0
+		elif x == 1
+		
+SyntaxError: invalid syntax
+>>> def fib(n):
+	m = 0
+	def num(x):
+		if x == 0:
+			return 0
+		elif x == 1:
+			return 1
+		else:
+			return fib(x - 1) + fib(x - 2)
+		while m < n
+		
+SyntaxError: invalid syntax
+>>> def fib(n):
+	m = 0
+	def num(x):
+		if x == 0:
+			return 0
+		elif x == 1:
+			return 1
+		else:
+			return fib(x - 1) + fib(x - 2)
+		while m < n:
+			m += 1
+			yield num(m)
+
+			
+>>> print([x for x in fib(10)])
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    print([x for x in fib(10)])
+TypeError: 'NoneType' object is not iterable
+>>> def fib(n):
+	m = 0
+	def num(x):
+		if x == 0:
+			return 0
+		elif x == 1:
+			return 1
+		else:
+			return num(x - 1) + num(x - 2)
+		while m < n:
+			m += 1
+			yield num(m)
+
+			
+>>> print([x for x in fib(10)])
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    print([x for x in fib(10)])
+TypeError: 'NoneType' object is not iterable
+>>> def FIB(n):
+	start = 0
+	def fib(x):
+
+		if x == 0:
+			return 0
+		elif x == 1:
+			return 1
+		else:
+			return fib(x - 1) + fib(x - 2)
+	while start < n:
+		start += 1
+		yield fib(start)
+
+		
+>>> print([x for x in FIB(10)])
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> 

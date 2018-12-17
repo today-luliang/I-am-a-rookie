@@ -1,0 +1,54 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> class Person:
+	def _init_(self, name, age):
+		self.name = name
+		self.age = age
+
+		
+>>> def greeet(self):
+	print("Hello, my name is %s!" % self.name)
+
+	
+>>> a = Person("Peter",20)
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    a = Person("Peter",20)
+TypeError: Person() takes no arguments
+>>> a = Person("Peter", 20)
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    a = Person("Peter", 20)
+TypeError: Person() takes no arguments
+>>> class Person:
+	def __init__(self, name, age)；
+	
+SyntaxError: invalid character in identifier
+>>> class Person:
+	def __init__(self, name, age):
+		self.name = name
+		self.age = age
+
+		
+>>> def greet(self):
+	print("Hello, my name is %s!" % self.name)
+
+	
+>>> a = Person("Peter", 20)
+>>> b = Person("Anna", 19)
+>>> a.greet()
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    a.greet()
+AttributeError: 'Person' object has no attribute 'greet'
+>>> a.greet( )
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    a.greet( )
+AttributeError: 'Person' object has no attribute 'greet'
+>>> b.greet()
+Traceback (most recent call last):
+  File "<pyshell#24>", line 1, in <module>
+    b.greet()
+AttributeError: 'Person' object has no attribute 'greet'
+>>> 

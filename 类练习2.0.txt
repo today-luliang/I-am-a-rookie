@@ -1,0 +1,143 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> class person:
+	def__init__(self, name, age):
+		
+SyntaxError: invalid syntax
+>>> class person:
+	def __init__ (self, name, age):
+		self.name = name
+		self.age = age
+
+		
+>>> def greet(self):
+	print("Hello, my name is %s!" % self.name)
+
+	
+>>> a = person("peter", 20)
+>>> b = person("Anna", 19)
+>>> a.greet()
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    a.greet()
+AttributeError: 'person' object has no attribute 'greet'
+>>> greet(a)
+Hello, my name is peter!
+>>> greet(b)
+Hello, my name is Anna!
+>>> print(a.age)
+20
+>>> print(a.name)
+peter
+>>> Rectangle:
+	
+SyntaxError: invalid syntax
+>>> Rectangle:
+	
+SyntaxError: invalid syntax
+>>> class Rectangle:
+	def __init__(X, Y)
+	
+SyntaxError: invalid syntax
+>>> class Rectangle:
+	def __init__(coordinate, X, Y):
+		coordinate.X = X
+		coordinate.Y = Y
+
+		
+>>> def address(coordinate):
+	print("%s!" % coordinate.X, "%s!" % coordinate.Y)
+
+	
+>>> m = Rectangle(X1, Y1)
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    m = Rectangle(X1, Y1)
+NameError: name 'X1' is not defined
+>>> m = Rectangle("X1", "Y1")
+>>> n = Rectangle("X2", "Y2")
+>>> address(a)
+Traceback (most recent call last):
+  File "<pyshell#34>", line 1, in <module>
+    address(a)
+  File "<pyshell#30>", line 2, in address
+    print("%s!" % coordinate.X, "%s!" % coordinate.Y)
+AttributeError: 'person' object has no attribute 'X'
+>>> address(m)
+X1! Y1!
+>>>  class Rectangle:
+	def __init__(coordinate, X, Y):
+		coordinate.X = X
+		coordinate.Y = Y
+
+		
+>>> def address(coordinate):
+	print("%s" % coordinate.X, "%s" % coordinate.Y)
+	
+SyntaxError: unexpected indent
+>>> address(n)
+X2! Y2!
+>>> class Rectangle:
+	def __init__(coordinate, X, Y):
+		coordinate.X = X
+		coordinate.Y = Y
+
+		
+>>> def address(coordinate, X, Y):
+	print("%s" % coordinate.X, "%s" % coordinate.Y)
+
+	
+>>> address(n)
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    address(n)
+TypeError: address() missing 2 required positional arguments: 'X' and 'Y'
+>>> m = Rectangle("X1", "Y1")
+>>> n = Rectangle("X2", "Y2")
+>>> address(m)
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    address(m)
+TypeError: address() missing 2 required positional arguments: 'X' and 'Y'
+>>> class Rectangle:
+	def __init__(coordinate, X, Y):
+		coordinate.X = X
+		coordinate.Y = Y
+
+		
+>>> def address(coordinate):
+	print("%s!" % coordinate.X, "%s!" % coordinate.Y)
+	
+SyntaxError: invalid syntax
+>>> class Rectangle:
+	def __init__(coordiate, X, Y):
+		coordinate.X = X
+		coordinate.Y = Y
+
+		
+>>> def address(coordinate):
+	print("%s" % coordinate.X, "%s" % coordinate.Y)
+
+	
+>>> m = Rectangle("X1", "Y1")
+Traceback (most recent call last):
+  File "<pyshell#60>", line 1, in <module>
+    m = Rectangle("X1", "Y1")
+  File "<pyshell#56>", line 3, in __init__
+    coordinate.X = X
+NameError: name 'coordinate' is not defined
+>>> m = Rectangle("X1","Y1")
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    m = Rectangle("X1","Y1")
+  File "<pyshell#56>", line 3, in __init__
+    coordinate.X = X
+NameError: name 'coordinate' is not defined
+>>> m = Rectangle("X1", "Y1")
+Traceback (most recent call last):
+  File "<pyshell#62>", line 1, in <module>
+    m = Rectangle("X1", "Y1")
+  File "<pyshell#56>", line 3, in __init__
+    coordinate.X = X
+NameError: name 'coordinate' is not defined
+>>> 

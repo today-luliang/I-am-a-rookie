@@ -1,0 +1,353 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> student = {
+	"Peter": {"age":  10, "address": "Lisbon"},
+	"Isabel": {"age": 11, "address": "Sesimbra"},
+	"Anna": {"age": 9, "address": "Lisbon"},
+	}
+>>> len(student)
+3
+>>> def average_age(student)
+SyntaxError: invalid syntax
+>>> student['Peter']['age']
+10
+>>> def average_age(student):
+	sumage = 0
+	for age in student['']['age']:
+		sumage = sum(age)
+		return sumage/len(student)
+
+	
+>>> average_age(student)
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    average_age(student)
+  File "<pyshell#14>", line 3, in average_age
+    for age in student['']['age']:
+KeyError: ''
+>>> ages = {
+	"Peter": 10,
+	"Isabel": 11,
+	"Anna": 9,
+	"Thomas": 10,
+	"Bob": 10,
+	"Joseph": 11,
+	"Maria": 12,
+	"Gabriel": 10,
+	}
+>>> def average_age(ages):
+	sumage  = 0
+	for age in ages.item():
+		sumage = sum(age)
+		return sumage/len(ages)
+
+	
+>>> average_age(ages)
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    average_age(ages)
+  File "<pyshell#31>", line 3, in average_age
+    for age in ages.item():
+AttributeError: 'dict' object has no attribute 'item'
+>>> def find_the_oldest(ages):
+	oldestage = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > oldestage :
+			num = age
+			oldestname = 'name'
+			return oldestname ,age
+
+		
+>>> find_the_oldest(ages)
+('name', 10)
+>>> def find_the_oldest(ages):
+	num = 0
+	oldestname = ''
+	for name, age in ages.items():
+		if age > num :
+			num = age
+			oldestname = 'name'
+			return['oldestname :',age]
+
+		
+>>> find_the_oldest(ages)
+['oldestname :', 10]
+>>> def ave_age()；
+SyntaxError: invalid character in identifier
+>>> def ave_age(dict)：
+SyntaxError: invalid character in identifier
+>>> def ave_age(dict):
+	sumage = 0
+	for stu in student.values():
+		sumage += stu['age']
+		return sumage/len(student)
+	print('the average age:',ave_age(student))
+
+	
+>>> ave_age(ages)
+3.3333333333333335
+>>> def average(dict):
+	sumage = 0
+	for age in ages.values():
+		sumage += age
+		return sumage/len(ages)
+	print('the average age:',average(ages))
+
+	
+>>> average(ages)
+1.25
+>>> def average(dict):
+	sumage = 0
+	for age in age.values():
+		sumage = age
+		return sumage/len(ages)
+	print('the average age:',average(ages))
+
+	
+>>> average(ages)
+Traceback (most recent call last):
+  File "<pyshell#65>", line 1, in <module>
+    average(ages)
+  File "<pyshell#64>", line 3, in average
+    for age in age.values():
+UnboundLocalError: local variable 'age' referenced before assignment
+>>> def average(dict):
+	sumage = 0
+	for age in ages.values():
+		sumage = age
+		return sumage/len(ages)
+	print('the average age:',average(ages))
+
+	
+>>> average(ages)
+1.25
+>>> def average(dict)；
+SyntaxError: invalid character in identifier
+>>> def average(dict)；
+SyntaxError: invalid character in identifier
+>>> def average(dict):
+	sumage = 0
+	for age in ages.values():
+		sumage = sum(age)
+		return sumage/len(ages)
+	print('the average age:',average(ages))
+
+	
+>>> average(ages)
+Traceback (most recent call last):
+  File "<pyshell#83>", line 1, in <module>
+    average(ages)
+  File "<pyshell#82>", line 4, in average
+    sumage = sum(age)
+TypeError: 'int' object is not iterable
+>>> def average(dict):
+	sumage = 0
+	for age in ages.values()；
+	
+SyntaxError: invalid character in identifier
+>>> def average(dict)；
+SyntaxError: invalid character in identifier
+>>> def average(dict):
+	sumage = 0
+	for age in ages,values():
+		sumage = age
+		return sum(sumage)/len(ages)
+	print('the average age:',average(ages))
+
+	
+>>> average(ages)
+Traceback (most recent call last):
+  File "<pyshell#95>", line 1, in <module>
+    average(ages)
+  File "<pyshell#94>", line 3, in average
+    for age in ages,values():
+NameError: name 'values' is not defined
+>>> def new_ages(dict):
+	for name,age in ages.items():
+		dict['age'] = n
+		return ages
+	print('new_ages(ages)')
+
+	
+>>> new_ages(ages)
+Traceback (most recent call last):
+  File "<pyshell#104>", line 1, in <module>
+    new_ages(ages)
+  File "<pyshell#103>", line 3, in new_ages
+    dict['age'] = n
+NameError: name 'n' is not defined
+>>> def new_age(dict):
+	new_age = {}
+	for name, age in ages,items():
+		if age == n
+		
+SyntaxError: invalid syntax
+>>> def new_age(dict):
+	new_age = {}
+	for name, age in ages,items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages))
+
+		
+>>> new_age(ages)
+Traceback (most recent call last):
+  File "<pyshell#116>", line 1, in <module>
+    new_age(ages)
+  File "<pyshell#115>", line 3, in new_age
+    for name, age in ages,items():
+NameError: name 'items' is not defined
+>>> ef new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,n))
+		
+SyntaxError: invalid syntax
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,n))
+
+		
+>>> new_age(ages)
+Traceback (most recent call last):
+  File "<pyshell#120>", line 1, in <module>
+    new_age(ages)
+TypeError: new_age() missing 1 required positional argument: 'n'
+>>> def new_age(dict):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,n))
+
+		
+>>> new_age(ages)
+Traceback (most recent call last):
+  File "<pyshell#123>", line 1, in <module>
+    new_age(ages)
+  File "<pyshell#122>", line 4, in new_age
+    if age == n:
+NameError: name 'n' is not defined
+>>> new_age(ages,10)
+Traceback (most recent call last):
+  File "<pyshell#124>", line 1, in <module>
+    new_age(ages,10)
+TypeError: new_age() takes 1 positional argument but 2 were given
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,10))
+
+		
+>>> new_age(ages,10)
+{'Peter': 10}
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		while age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,10))
+
+		
+>>> new_age(ages,8)
+Traceback (most recent call last):
+  File "<pyshell#130>", line 1, in <module>
+    new_age(ages,8)
+  File "<pyshell#129>", line 7, in new_age
+    print('the new age student:',new_age(ages,10))
+TypeError: 'dict' object is not callable
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,n))
+
+		
+>>> new_age(ages,8)
+Traceback (most recent call last):
+  File "<pyshell#133>", line 1, in <module>
+    new_age(ages,8)
+  File "<pyshell#132>", line 7, in new_age
+    print('the new age student:',new_age(ages,n))
+TypeError: 'dict' object is not callable
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		while age == n:
+			new_age[name] = n
+			return new_age
+
+		
+>>> new_age(ages,8)
+>>> 
+>>> def new_age(ages,n):
+	new_age = {}
+	for name, age in ages.items():
+		if age == n:
+			new_age[name] = n
+			return new_age
+		print('the new age student:',new_age(ages,10))
+
+		
+>>> new_age(ages,10)
+{'Peter': 10}
+>>> def new_ages(ages,n):
+      new_ages = {}
+      for name,age in ages.items():
+          if age == n:
+              new_ages[name] = n
+      return new_ages
+  print('the 10 years old student:',new_ages(ages,10))
+  
+SyntaxError: unindent does not match any outer indentation level
+>>> def new_ages(ages,n):
+      new_ages = {}
+      for name,age in ages.items():
+          if age == n:
+              new_ages[name] = n
+      return new_ages
+     print('the 10 years old student:',new_ages(ages,10))
+     
+SyntaxError: unindent does not match any outer indentation level
+>>> def new_ages(ages,n):
+      new_ages = {}
+      for name,age in ages.items():
+          if age == n:
+              new_ages[name] = n
+              return new_ages
+         print('the 10 years old student:',new_ages(ages,10))
+         
+SyntaxError: unindent does not match any outer indentation level
+>>> def new_ages(ages,n):
+	new_ages = {}
+	for name, age in ages.items():
+		if age == n:
+			new_agse[name] = n
+			return new_ages
+		print('the 10 years old student:',new_ages(ages,10))
+
+		
+>>> new_ages(ages,10)
+Traceback (most recent call last):
+  File "<pyshell#146>", line 1, in <module>
+    new_ages(ages,10)
+  File "<pyshell#145>", line 5, in new_ages
+    new_agse[name] = n
+NameError: name 'new_agse' is not defined
+>>> 

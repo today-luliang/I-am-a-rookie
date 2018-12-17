@@ -1,0 +1,188 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> ages = {
+	"Peter": 10,
+	"Isabel": 11,
+	"Anna": 9,
+	"Thomas": 10,
+	"Bob": 10,
+	"Joseph": 11,
+	"Maria": 12,
+	"Gaberiel": 10,
+	}
+>>> print(ages["Peter"])
+10
+>>> for name, age in ages.items()；
+SyntaxError: invalid character in identifier
+>>> for name,age in ages.items():
+	print(name,age)
+
+	
+Peter 10
+Isabel 11
+Anna 9
+Thomas 10
+Bob 10
+Joseph 11
+Maria 12
+Gaberiel 10
+>>> d = {
+	0:[0,0,0],
+	1:[1,1,1],
+	2:[2,2,2],
+	}
+>>> d[2]
+[2, 2, 2]
+>>> student = {
+	"peter":{"age": 10,"address": "Lisbon"},
+	"Isabel":{"age": 11,"address": "Sesimbra"},
+	"Anna":{"age": 9, "address": "Lisbon"},
+	}
+>>> student['peter']
+{'age': 10, 'address': 'Lisbon'}
+>>> student['peter']['age']
+10
+>>> student['Anna']['address']
+'Lisbon'
+>>> len(ages)
+8
+>>> def add(ages):
+	for num in ages.items():
+		print(sum(num)/len(ages))
+
+		
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    add(ages)
+  File "<pyshell#37>", line 3, in add
+    print(sum(num)/len(ages))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> def add(ages):
+	for name, age in ages.items():
+		print(name,age)
+		return(sum(age)/len(ages))
+
+	
+>>> add(ages)
+Peter 10
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    add(ages)
+  File "<pyshell#43>", line 4, in add
+    return(sum(age)/len(ages))
+TypeError: 'int' object is not iterable
+>>> def add(ages):
+	for name, age in ages.items():
+		print(name,age)
+
+		
+>>> add(ages)
+Peter 10
+Isabel 11
+Anna 9
+Thomas 10
+Bob 10
+Joseph 11
+Maria 12
+Gaberiel 10
+>>> def add(ages):
+	for name, in ages.items():
+		print(name)
+
+		
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    add(ages)
+  File "<pyshell#49>", line 2, in add
+    for name, in ages.items():
+ValueError: too many values to unpack (expected 1)
+>>> def add(ages):
+	for name in ages.items():
+		print(name)
+
+		
+>>> add(ages)
+('Peter', 10)
+('Isabel', 11)
+('Anna', 9)
+('Thomas', 10)
+('Bob', 10)
+('Joseph', 11)
+('Maria', 12)
+('Gaberiel', 10)
+>>> sum(ages)
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    sum(ages)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> def add(ages):
+	for name in ages.items():
+		print(name)
+	for age in ages.items():
+		print(age)
+
+		
+>>> add(ages)
+('Peter', 10)
+('Isabel', 11)
+('Anna', 9)
+('Thomas', 10)
+('Bob', 10)
+('Joseph', 11)
+('Maria', 12)
+('Gaberiel', 10)
+('Peter', 10)
+('Isabel', 11)
+('Anna', 9)
+('Thomas', 10)
+('Bob', 10)
+('Joseph', 11)
+('Maria', 12)
+('Gaberiel', 10)
+>>> for num in ages():
+	print(num)
+
+	
+Traceback (most recent call last):
+  File "<pyshell#65>", line 1, in <module>
+    for num in ages():
+TypeError: 'dict' object is not callable
+>>> dict = {'name':'zara','age':7,'class':'first'}
+>>> print"dict['name']:",dict['name']
+SyntaxError: invalid syntax
+>>> ages("Anna")
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    ages("Anna")
+TypeError: 'dict' object is not callable
+>>> def add(ages):
+	for num in ages.items():
+		print(ages["num"])
+
+		
+>>> add(ages)
+Traceback (most recent call last):
+  File "<pyshell#73>", line 1, in <module>
+    add(ages)
+  File "<pyshell#72>", line 3, in add
+    print(ages["num"])
+KeyError: 'num'
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = num + age
+	return sum(num)/len(ages)
+print("平均年龄"，add(ages))
+SyntaxError: invalid syntax
+>>> def add(ages):
+	num = 0
+	for age in ages.value():
+		num = num + age
+	return sum(num)/len(ages)
+print('平均年龄'：,add(ages))
+SyntaxError: invalid syntax
+>>> def add(ages):
+	num = 0
+	

@@ -1,0 +1,359 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def myrange(a, b):
+	while a < b:
+		yield a
+		a += 1
+
+		
+>>> for value in myrange(1, 4):
+	print(value)
+
+	
+1
+2
+3
+>>> myrange(1, 4)
+<generator object myrange at 0x0000023F3A9FA6D8>
+>>> seq = myrange(1, 3)
+>>> next(seq)
+1
+>>> next(seq)
+2
+>>> next(seq)
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    next(seq)
+StopIteration
+>>> def squares(n):
+	for value in range(n):
+		yield value * value
+
+		
+>>> squares(3)
+<generator object squares at 0x0000023F3A9FA6D8>
+>>> num = squares(3)
+>>> next(num)
+0
+>>> next(num)
+1
+>>> next(num)
+4
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    next(num)
+StopIteration
+>>> def even(n):
+	for value in range(n):
+		if value % 2 == 0
+		
+SyntaxError: invalid syntax
+>>> def even(n):
+	for value in range(n):
+		if value % 2 == 0:
+			yield value
+
+			
+>>> even_num = even()def even(n):
+	for value in range(n):
+		value += 1
+		if value % 2 == 0:
+			yield value
+			
+SyntaxError: invalid syntax
+>>> def even(n):
+	for value in range(n):
+		value += 1
+		if value % 2 == 0:
+			yield value
+
+			
+>>> even_num = even(9)
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#33>", line 1, in <module>
+    next(num)
+StopIteration
+>>> next(even_num)
+2
+>>> next(even_num)
+4
+>>> next(even_num)
+6
+>>> next(even_num)
+8
+>>> next(even_num)
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    next(even_num)
+StopIteration
+>>> def even(n):
+	for value in range(n):
+		if value % 2 == 1:
+			yield value
+
+			
+>>> eve = even(9)
+>>> next(eve)
+1
+>>> next(eve)
+3
+>>> next(eve)
+5
+>>> 
+>>> next(eve)
+7
+>>> next(eve)
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    next(eve)
+StopIteration
+>>> def myrange(n):
+	for value in range(n):
+		value = n
+		if value > 0:
+			value -= 1
+			yield value
+
+			
+>>> num = myrange(9)
+>>> next(num)
+8
+>>> next(num)
+8
+>>> next(num)
+8
+>>> def myrange(n):
+	for value in range(n):
+		value = n
+		while value > 0:
+			value -= 1
+			yield value
+
+			
+>>> num = myrange(9)
+>>> next(num)
+8
+>>> next(num)
+7
+>>> next(num)
+6
+>>> next(num)
+5
+>>> next(num)
+4
+>>> next(num)
+3
+>>> next(num)
+2
+>>> next(num)
+1
+>>> next(num)
+0
+>>> next(num)
+8
+>>> next(num)
+7
+>>> next(num)
+6
+>>> next(num)
+5
+>>> 
+>>> 55next(num)
+SyntaxError: invalid syntax
+>>> next(num)
+4
+>>> next(num)
+3
+>>> next(num)
+2
+>>> next(num)
+1
+>>> next(num)
+0
+>>> def myrange(n):
+	for value in range(n):
+		value = n + 1
+		while value > 0:
+			value -= 1
+			yield value
+
+			
+>>> num = myrange(9)
+>>> next(num)
+9
+>>> next(num)
+8
+>>> next(num)
+7
+>>> next(num)
+6
+>>> next(num)
+5
+>>> next(num)
+4
+>>> next(num)
+3
+>>> 3next(num)
+SyntaxError: invalid syntax
+>>> next(num)
+2
+>>> next(num)
+1
+>>> next(num)
+0
+>>> def myrange(n):
+	for value in range(n):
+		value = n
+		if value > 0:
+			value -= 1
+			yield value
+
+			
+>>> num = myrange(9)
+>>> next(num)
+8
+>>> next(num)
+8
+>>> def fib_num(n):
+	for value in range(n):
+		fib = value + fib
+		yield fib
+		else:
+			
+SyntaxError: invalid syntax
+>>> def fib_num(n):
+	for value in range(n):
+		fib = value + fib
+		yield fib
+		else:
+			
+SyntaxError: invalid syntax
+>>> def fib_num(n):
+	for value in range(n):
+		fib = value + fib
+		count = 0
+		count = 1
+		if count > n:
+			yield fib
+
+			
+>>> num = fib_num(9)
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#117>", line 1, in <module>
+    next(num)
+  File "<pyshell#115>", line 3, in fib_num
+    fib = value + fib
+UnboundLocalError: local variable 'fib' referenced before assignment
+>>> def fib_num(n):
+	for value in range(n):
+		count = 0
+		count = 1
+		if count < n:
+			fib = fib + value
+			yield fib
+
+			
+>>> num = fib_num(9)
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#121>", line 1, in <module>
+    next(num)
+  File "<pyshell#119>", line 6, in fib_num
+    fib = fib + value
+UnboundLocalError: local variable 'fib' referenced before assignment
+>>> def fib_num(n):
+	for value in range(n):
+		count = 0
+		count = 1
+		if count < n:
+			fib = 0
+			fib = fib + value
+			yield fib
+
+			
+>>> num = fib_num(9)
+>>> next(num)
+0
+>>> next(num)
+1
+>>> next(num)
+2
+>>> next(num)
+3
+>>> next(num)
+4
+>>> next(num)
+5
+>>> next(num)
+6
+>>> next(num)
+7
+>>> next(num)
+8
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#134>", line 1, in <module>
+    next(num)
+StopIteration
+>>> def fib_num(n):
+	for value in range(n):
+		count = 0
+		count = 1
+		if count < n:
+			fib, value = value, fib + value
+			count += 1
+			yield fib
+
+			
+>>> num = fib_num(9)
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#142>", line 1, in <module>
+    next(num)
+  File "<pyshell#140>", line 6, in fib_num
+    fib, value = value, fib + value
+UnboundLocalError: local variable 'fib' referenced before assignment
+>>> def fib_num(n):
+	for value in range(n):
+		count = 0
+		count = 1
+		if count < n:
+			fib = 0
+			fib, value = value, fib + value
+			count += 1
+			yield fib
+
+			
+>>> num = fib_num(9)
+>>> next(num)
+0
+>>> next(num)
+1
+>>> next(num)
+2
+>>> next(num)
+3
+>>> next(num)
+4
+>>> next(num)
+5
+>>> next(num)
+6
+>>> 
+>>> 
+>>> next(num)
+7
+>>> next(num)
+8
+>>> next(num)
+Traceback (most recent call last):
+  File "<pyshell#157>", line 1, in <module>
+    next(num)
+StopIteration
+>>> def fib_num(n)
+SyntaxError: invalid syntax
+>>> def fib_num(n):
+	
